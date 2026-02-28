@@ -1,5 +1,7 @@
 <script lang="ts">
 	import './layout.css';
+	import './shadcn.css';
+
 	import 'nprogress/nprogress.css';
 	import NProgress from 'nprogress';
 	import { navigating } from '$app/state';
@@ -20,6 +22,7 @@
 	import UnderConstruction from '@/partials/UnderConstruction.svelte';
 
 	let { children } = $props();
+	let isNavigating = $state(false);
 
 	NProgress.configure({
 		minimum: 0.16,
@@ -32,8 +35,10 @@
 		if (navigating.to) {
 			NProgress.start();
 			CURRENT_PATH.set(navigating.to.url.pathname);
+			isNavigating = true;
 		} else {
 			NProgress.done();
+			isNavigating = false;
 		}
 	});
 
@@ -49,4 +54,10 @@
 	<UnderConstruction />
 {:else}
 	{@render children()}
+{/if}
+
+{#if isNavigating}
+  <div class="fixed inset-0 bg-white flex items-center justify-center z-50">
+		<p>Loading...</p>
+  </div>
 {/if}

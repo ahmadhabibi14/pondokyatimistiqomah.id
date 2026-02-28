@@ -4,8 +4,10 @@
 
 <Head title="Pondok Yatim Istiqomah" />
 
-<div class="left-0 right-0 top-0 bottom-0 fixed">
-	<div class="inset-0 h-full w-full flex flex-col justify-center items-center gap-4">
-		<h1 class="text-center text-2xl font-bold">Pondok Yatim Istiqomah</h1>
-	</div>
+<div class="min-h-[900px] w-full flex flex-col">
+	<img
+		src="/img/jumbotron.jpg"
+		class="w-full h-auto object-cover"
+		alt="Jumbotron Pondok Yatim Istiqomah"
+	/>
 </div>
