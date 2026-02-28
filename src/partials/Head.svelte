@@ -32,7 +32,7 @@
 	<meta property="og:image:width" content={imgWidth} />
 	<meta property="og:image:height" content={imgHeight} />
 	<meta property="og:image:alt" content={title} />
-	<meta property="og:see_also" content="https://www.instagram.com/jayakartahalalcenter/" />
+	<meta property="og:see_also" content="https://www.instagram.com/pondokyatimistiqomah" />
 
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={title} />
