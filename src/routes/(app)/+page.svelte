@@ -1,13 +1,14 @@
 <script lang="ts">
 	import Head from '@/partials/Head.svelte';
+	import AboutUs from '@/partials/home/AboutUs.svelte';
+	import Contact from '@/partials/home/Contact.svelte';
+	import Jumbotron from '@/partials/home/Jumbotron.svelte';
 </script>
 
 <Head title="Pondok Yatim Istiqomah" />
 
 <div class="min-h-[900px] w-full flex flex-col">
-	<img
-		src="/img/jumbotron.jpg"
-		class="w-full h-auto object-cover"
-		alt="Jumbotron Pondok Yatim Istiqomah"
-	/>
+	<Jumbotron />
+	<AboutUs />
+	<Contact />
 </div>
