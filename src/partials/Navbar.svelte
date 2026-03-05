@@ -20,7 +20,7 @@
 	class="top-0 z-99 fixed w-full h-24 flex flex-col items-center justify-center py-auto bg-istq text-istq-white shadow-lg"
 >
 	<div
-		class="h-full px-5 md:px-0 container max-w-6xl flex flex-row items-center justify-between mx-auto"
+		class="h-full px-4 md:px-0 container max-w-6xl flex flex-row items-center justify-between mx-auto"
 	>
 		<div class="flex flex-row gap-3 items-center">
 			<a href="/" class="w-fit h-fit
@@ -49,31 +49,31 @@
 					<HoverCard.Content class="z-100 px-2 py-3">
 						<div class="flex flex-col text-sm">
 							<a
-								href="/profile#tentang"
+								href="/profil#tentang"
 								class="block px-4 py-2 hover:bg-gray-100 hover:text-istq-orange rounded-md"
 							>
 								Tentang
 							</a>
 							<a
-								href="/profile#visi"
+								href="/profil#visi"
 								class="block px-4 py-2 hover:bg-gray-100 hover:text-istq-orange rounded-md"
 							>
 								Visi
 							</a>
 							<a
-								href="/profile#misi"
+								href="/profil#misi"
 								class="block px-4 py-2 hover:bg-gray-100 hover:text-istq-orange rounded-md"
 							>
 								Misi
 							</a>
 							<a
-								href="/profile#struktur"
+								href="/profil#struktur"
 								class="block px-4 py-2 hover:bg-gray-100 hover:text-istq-orange rounded-md"
 							>
 								Struktur
 							</a>
 							<a
-								href="/profile#logo"
+								href="/profil#logo"
 								class="block px-4 py-2 hover:bg-gray-100 hover:text-istq-orange rounded-md"
 							>
 								Makna Logo

@@ -3,7 +3,7 @@
 </script>
 
 <section
-	class="container max-w-6xl mx-auto my-10 md:scroll-mt-28 scroll-mt-20 px-5 md:px-0"
+	class="container max-w-6xl mx-auto my-10 md:scroll-mt-28 scroll-mt-20 px-4 md:px-0"
 	id="about-us"
 >
   <div class="flex flex-col gap-6">
