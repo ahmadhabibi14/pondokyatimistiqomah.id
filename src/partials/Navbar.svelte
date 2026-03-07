@@ -13,6 +13,7 @@
 	} from 'svelte-icons-pack/ri';
 	import * as HoverCard from '$lib/components/ui/hover-card/index.js';
 	import { NAVBAR_OPEN } from '@/states/navbar';
+	import { ProgramsShort } from '@/data/programs';
 </script>
 
 <div
@@ -50,31 +51,31 @@
 						<div class="flex flex-col text-sm">
 							<a
 								href="/profil#tentang"
-								class="block px-4 py-2 hover:bg-gray-100 hover:text-istq-orange rounded-md"
+								class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
 							>
 								Tentang
 							</a>
 							<a
 								href="/profil#visi"
-								class="block px-4 py-2 hover:bg-gray-100 hover:text-istq-orange rounded-md"
+								class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
 							>
 								Visi
 							</a>
 							<a
 								href="/profil#misi"
-								class="block px-4 py-2 hover:bg-gray-100 hover:text-istq-orange rounded-md"
+								class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
 							>
 								Misi
 							</a>
 							<a
 								href="/profil#struktur"
-								class="block px-4 py-2 hover:bg-gray-100 hover:text-istq-orange rounded-md"
+								class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
 							>
 								Struktur
 							</a>
 							<a
 								href="/profil#logo"
-								class="block px-4 py-2 hover:bg-gray-100 hover:text-istq-orange rounded-md"
+								class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
 							>
 								Makna Logo
 							</a>
@@ -88,15 +89,17 @@
 						<span>Program</span>
 						<Icon src={RiArrowsArrowDownSLine} size="20" className="" />
 					</HoverCard.Trigger>
-					<HoverCard.Content class="z-100 px-2 py-3">
+					<HoverCard.Content class="z-100 px-2 py-3 w-[300px]">
 						<div class="flex flex-col text-sm">
-							<a
-								href="/cihuyy"
-								data-sveltekit-reload
-								class="block px-4 py-2 hover:bg-gray-100 hover:text-istq-orange rounded-md"
-							>
-								CIHUYY
-							</a>
+							{#each ProgramsShort as pg}
+								<a
+									href="{pg.link}"
+									data-sveltekit-reload
+									class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
+								>
+									{pg.title}
+								</a>
+							{/each}
 						</div>
 					</HoverCard.Content>
 				</HoverCard.Root>
@@ -107,7 +110,7 @@
 		</nav>
 		<a
 			href="https://wa.me/6281285960701"
-			class="md:block hidden w-fit h-fit cursor-pointer py-2 px-6 rounded-full text-istq-white bg-istq-orange-darker hover:bg-istq-orange-darker/80 text-sm"
+			class="md:block hidden w-fit h-fit cursor-pointer py-2 px-8 font-medium rounded-full text-istq bg-istq-orange hover:bg-istq-orange-darker text-sm"
 		>
 			Donasi
 		</a>

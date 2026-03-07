@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Icon } from "svelte-icons-pack";
-	import { RiBusinessMailLine, RiDevicePhoneLine, RiLogosFacebookCircleLine, RiLogosInstagramLine, RiLogosWhatsappLine, RiMapMapPinRangeLine } from "svelte-icons-pack/ri";
+	import { RiBusinessMailLine, RiDevicePhoneLine, RiLogosFacebookCircleLine, RiLogosInstagramLine, RiLogosTwitterXFill, RiLogosWhatsappLine, RiLogosYoutubeLine, RiMapMapPinRangeLine } from "svelte-icons-pack/ri";
 
   const year: number = new Date().getFullYear();
 </script>
@@ -11,24 +11,20 @@
       <div class="flex flex-col gap-4 items-start">
         <div class="flex flex-row gap-2 items-center">
           <img
-            src="/icons/logo.png"
+            src="/icons/logo-text.png"
             alt="Pondok Yatim Istiqomah Logo"
-            class="h-24 w-auto object-contain"
+            class="h-18 w-auto object-contain"
           />
-          <div class="flex flex-col gap-0">
-            <span class="text-xs shrink-0 whitespace-nowrap">Yayasan Pondok Yatim</span>
-            <span class="text-xl font-bold shrink-0 whitespace-nowrap">ISTIQOMAH</span>
-          </div>
         </div>
         <p>
-          Blablablabla isi disini
+          Membina anak yatim dan dhuafa menjadi generasi Qur’ani yang berakhlak, mandiri, dan bermanfaat bagi umat.
         </p>
-        <div class="flex flex-row gap-1.5 items-center" role="navigation">
+        <div class="flex flex-row gap-3 items-center" role="navigation">
           <a
             aria-label="Instagram"
             href="https://www.instagram.com/qurancenter"
             target="_blank"
-            class="flex justify-center items-center p-2 border border-istq-green text-istq-green bg-istq-green/10 rounded-full"
+            class="flex justify-center items-center p-2 rounded-full bg-white text-istq"
           >
             <Icon
               src={RiLogosInstagramLine}
@@ -39,7 +35,7 @@
             aria-label="Facebook"
             href="https://www.facebook.com/qurancenter"
             target="_blank"
-            class="flex justify-center items-center p-2 border border-istq-green text-istq-green bg-istq-green/10 rounded-full"
+            class="flex justify-center items-center p-2 rounded-full bg-white text-istq"
           >
             <Icon
               src={RiLogosFacebookCircleLine}
@@ -47,10 +43,32 @@
             />
           </a>
           <a
+            aria-label="YouTube"
+            href="https://www.youtube.com/channel/qurancenter"
+            target="_blank"
+            class="flex justify-center items-center p-2 rounded-full bg-white text-istq"
+          >
+            <Icon
+              src={RiLogosYoutubeLine}
+              size="22"
+            />
+          </a>
+          <a
+            aria-label="X (Twitter)"
+            href="https://www.x.com/qurancenter"
+            target="_blank"
+            class="flex justify-center items-center p-2 rounded-full bg-white text-istq"
+          >
+            <Icon
+              src={RiLogosTwitterXFill}
+              size="19"
+            />
+          </a>
+          <a
             aria-label="WhatsApp"
             href="https://wa.me/6281285960701"
             target="_blank"
-            class="flex justify-center items-center p-2 border border-istq-green text-istq-green bg-istq-green/10 rounded-full"
+            class="flex justify-center items-center p-2 rounded-full bg-white text-istq"
           >
             <Icon
               src={RiLogosWhatsappLine}

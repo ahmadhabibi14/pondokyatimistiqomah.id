@@ -4,7 +4,7 @@
 
 </script>
 
-<section class="w-full my-0 py-10 bg-istq-lighter text-white">
+<section class="w-full my-0 py-10 bg-istq-orange text-istq">
 	<div class="container max-w-6xl mx-auto flex flex-col gap-10 px-4 md:px-0">
 		<h2 class="md:text-4xl text-3xl font-bold text-center">Hubungi Kami</h2>
 		<div class="grid grid-cols-[40%_1fr] gap-5">
@@ -12,11 +12,11 @@
 				<a
 					href="https://maps.app.goo.gl/JHAMACgXWpHYZrKD8"
 					target="_blank"
-					class="cursor-pointer flex flex-row gap-2 items-start hover:underline hover:text-istq-orange"
+					class="cursor-pointer flex flex-row gap-2 items-start hover:underline hover:text-istq"
 				>
 					<Icon
 						size="25"
-						className="text-istq-orange fill-istq-orange shrink-0"
+						className="fill-istq shrink-0"
 						src={RiMapMapPinRangeLine}
 					/>
 					<p class="grow">Jl. Nangka III No. 47B, Perumahan Jatibening II Kel. Jatibening Baru, Kec. Pondokgede, Kota Bekasi</p>
@@ -24,22 +24,22 @@
 				<a
 					href="mailto:pondokyatimistiqomah1@gmail.com"
 					target="_blank"
-					class="cursor-pointer flex flex-row gap-2 items-center hover:underline hover:text-istq-orange"
+					class="cursor-pointer flex flex-row gap-2 items-center hover:underline hover:text-istq"
 				>
 					<Icon
 						size="25"
-						className="text-istq-orange fill-istq-orange shrink-0"
+						className="text-istq fill-istq shrink-0"
 						src={RiBusinessMailLine}
 					/>
 					<p class="grow">pondokyatimistiqomah1@gmail.com</p>
 				</a>
 				<a
 					href="tel:+6281213339923"
-					class="cursor-pointer flex flex-row gap-2 items-center hover:underline hover:text-istq-orange"
+					class="cursor-pointer flex flex-row gap-2 items-center hover:underline hover:text-istq"
 				>
 					<Icon
 						size="25"
-						className="text-istq-orange fill-istq-orange shrink-0"
+						className="text-istq fill-istq shrink-0"
 						src={RiDevicePhoneLine}
 					/>
 					<p class="grow">(+62) 812-1333-9923</p>
