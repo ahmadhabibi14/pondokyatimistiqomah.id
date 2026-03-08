@@ -11,7 +11,7 @@
   const wpFeaturedMedia: WPAttachment[] | undefined = post?._embedded?.['wp:featuredmedia'] as WPAttachment[] | undefined;
 	const thumb: WPAttachment | undefined = wpFeaturedMedia?.[0];
 
-	const imageUrl: string = thumb?.source_url ?? '/img/placeholder.png';
+	const imageUrl: string = thumb?.source_url ?? '/img/placeholder.svg';
 </script>
 
 <a

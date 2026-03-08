@@ -47,7 +47,7 @@
 <div bind:this={container} class="relative overflow-hidden {classNameContainer}">
 	{#if !loaded || error}
 		<img
-			src="/img/placeholder.png"
+			src="/img/placeholder.svg"
 			alt="Placeholder"
 			class="absolute inset-0 w-full h-full object-cover"
 		/>

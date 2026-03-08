@@ -24,7 +24,7 @@
             aria-label="Instagram"
             href="https://www.instagram.com/qurancenter"
             target="_blank"
-            class="flex justify-center items-center p-2 rounded-full bg-white text-istq"
+            class="flex justify-center items-center p-2 rounded-full bg-white hover:bg-white/90 text-istq"
           >
             <Icon
               src={RiLogosInstagramLine}
@@ -35,7 +35,7 @@
             aria-label="Facebook"
             href="https://www.facebook.com/qurancenter"
             target="_blank"
-            class="flex justify-center items-center p-2 rounded-full bg-white text-istq"
+            class="flex justify-center items-center p-2 rounded-full bg-white hover:bg-white/90 text-istq"
           >
             <Icon
               src={RiLogosFacebookCircleLine}
@@ -46,7 +46,7 @@
             aria-label="YouTube"
             href="https://www.youtube.com/channel/qurancenter"
             target="_blank"
-            class="flex justify-center items-center p-2 rounded-full bg-white text-istq"
+            class="flex justify-center items-center p-2 rounded-full bg-white hover:bg-white/90 text-istq"
           >
             <Icon
               src={RiLogosYoutubeLine}
@@ -57,7 +57,7 @@
             aria-label="X (Twitter)"
             href="https://www.x.com/qurancenter"
             target="_blank"
-            class="flex justify-center items-center p-2 rounded-full bg-white text-istq"
+            class="flex justify-center items-center p-2 rounded-full bg-white hover:bg-white/90 text-istq"
           >
             <Icon
               src={RiLogosTwitterXFill}
@@ -68,7 +68,7 @@
             aria-label="WhatsApp"
             href="https://wa.me/6281285960701"
             target="_blank"
-            class="flex justify-center items-center p-2 rounded-full bg-white text-istq"
+            class="flex justify-center items-center p-2 rounded-full bg-white hover:bg-white/90 text-istq"
           >
             <Icon
               src={RiLogosWhatsappLine}
@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="flex flex-col gap-3 mt-4">
-        <h4 class="text-lg text-qc-white font-semibold">Navigation</h4>
+        <h4 class="text-lg text-qc-white font-semibold text-white">Navigation</h4>
         <nav class="flex flex-col gap-1">
           <a href="/profil" class="hover:underline hover:text-istq-green">Profil</a>
           <a href="/program" class="hover:underline hover:text-istq-green">Program</a>
@@ -88,7 +88,7 @@
       </div>
 
       <div class="flex flex-col gap-3 mt-4">
-        <h4 class="text-lg text-qc-white font-semibold">Contact</h4>
+        <h4 class="text-lg text-qc-white font-semibold text-white">Contact</h4>
         <div class="flex flex-col gap-1">
           <a href="https://maps.app.goo.gl/D5JcyKYwyHBXSkWc6" target="_blank"
           class="flex flex-row gap-2 items-start hover:underline hover:text-istq-green">

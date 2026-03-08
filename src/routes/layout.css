@@ -19,7 +19,7 @@ html {
 }
 
 *::selection {
-  @apply bg-istq-green-darker text-istq-white; 
+  @apply bg-istq-green-darker text-white; 
 }
 
 #nprogress {

@@ -7,7 +7,7 @@
 	id="about-us"
 >
   <div class="flex flex-col gap-6">
-    <h2 class="md:text-4xl text-3xl font-bold">Tentang Kami</h2>
+    <h2 class="md:text-4xl text-3xl font-bold text-center">Tentang Kami</h2>
     <p class="text-lg">
       Kami adalah lembaga sosial dan dakwah yang bergerak dalam bidang pembinaan, pendidikan, serta pemberdayaan anak-anak yatim dan dhuafa. Yayasan ini hadir sebagai bentuk kepedulian nyata terhadap masa depan generasi bangsa, khususnya mereka yang membutuhkan perhatian, kasih sayang, dan pendampingan yang berkelanjutan.
     </p>

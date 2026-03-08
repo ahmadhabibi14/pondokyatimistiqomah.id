@@ -31,7 +31,7 @@
 		<h2 class="text-4xl font-bold">Struktur Organisasi</h2>
 		<div class="flex flex-col">
     <div class="overflow-x-auto">
-      <div class="p-1.5 min-w-5/12 inline-block align-middle border rounded-md">
+      <div class="p-1.5 min-w-5/12 inline-block align-middle border border-gray-300 rounded-md">
         <div class="overflow-hidden">
           <table class="min-w-full divide-y divide-neutral-200">
             <tbody id="tbody" class="divide-y divide-neutral-200 text-sm">

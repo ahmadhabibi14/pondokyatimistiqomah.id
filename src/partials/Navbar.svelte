@@ -2,18 +2,16 @@
 	import { Icon } from 'svelte-icons-pack';
 	import { BsList, BsX } from 'svelte-icons-pack/bs';
 	import {
-		RiArrowsArrowDownSLine,
-		RiBusinessCalendar2Line,
-		RiBusinessMailLine,
-		RiLogosFacebookFill,
-		RiLogosInstagramLine,
-		RiLogosTwitterXFill,
-		RiLogosWhatsappLine,
-		RiLogosYoutubeLine
+		RiArrowsArrowDownSLine
 	} from 'svelte-icons-pack/ri';
 	import * as HoverCard from '$lib/components/ui/hover-card/index.js';
 	import { NAVBAR_OPEN } from '@/states/navbar';
 	import { ProgramsShort } from '@/data/programs';
+	import NavMenuItems from './NavMenuItems.svelte';
+
+	function closeNavbar() {
+		NAVBAR_OPEN.set(false);
+	}
 </script>
 
 <div
@@ -121,3 +119,48 @@
 		</div>
 	</div>
 </div>
+
+<aside
+	class="{$NAVBAR_OPEN ? 'translate-y-0' : ''}
+  top-24
+  fixed z-98 transition-all
+  duration-300
+  ease-in-out
+  bg-white
+  shadow-lg
+  w-full h-fit
+  -translate-y-full
+  "
+>
+	<div class="flex flex-col gap-3 py-5 font-medium">
+		<a href="/" class="hover:text-qc px-5" onclick={closeNavbar}>Beranda</a>
+		<span class="h-px w-full border-t border-dashed border-gray-300"></span>
+		<NavMenuItems
+			name="Profil"
+			links={[
+				{ name: 'Tentang', link: '/profile#tentang' },
+				{ name: 'Visi', link: '/profile#visi' },
+				{ name: 'Misi', link: '/profile#misi' },
+				{ name: 'Struktur', link: '/profile#struktur' },
+				{ name: 'Logo', link: '/profile#logo' }
+			]}
+		/>
+		<span class="h-px w-full border-t border-dashed border-gray-300"></span>
+		<NavMenuItems
+			name="Program"
+			links={[
+				{ name: 'Semua Program', link: '/program' },
+				...ProgramsShort.map((program) => ({
+					name: String(program.title),
+					link: String(program.link)
+				}))
+			]}
+		/>
+		<span class="h-px w-full border-t border-dashed border-gray-300"></span>
+		<a href="/layanan" class="hover:text-qc px-5" onclick={closeNavbar}>Layanan</a>
+		<span class="h-px w-full border-t border-dashed border-gray-300"></span>
+		<a href="/posts" class="hover:text-qc px-5" onclick={closeNavbar}>Artikel</a>
+		<span class="h-px w-full border-t border-dashed border-gray-300"></span>
+		<a href="/ramadhan" class="hover:text-qc px-5" onclick={closeNavbar}>Ramadhan 1447</a>
+	</div>
+</aside>
