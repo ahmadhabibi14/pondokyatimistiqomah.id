@@ -90,19 +90,20 @@
       <div class="flex flex-col gap-3 mt-4">
         <h4 class="text-lg text-qc-white font-semibold text-white">Contact</h4>
         <div class="flex flex-col gap-1">
-          <a href="https://maps.app.goo.gl/D5JcyKYwyHBXSkWc6" target="_blank"
+          <a href="https://maps.app.goo.gl/JHAMACgXWpHYZrKD8" target="_blank"
           class="flex flex-row gap-2 items-start hover:underline hover:text-istq-green">
             <Icon size="20" className="text-istq-green fill-istq-green shrink-0" src={RiMapMapPinRangeLine} />
-            <p class="grow">Jl. Cipinang Cempedak 1.no.14 Polonia Jakarta Timur</p>
+            <p class="grow">Jl. Nangka III No. 47B, Perumahan Jatibening II
+Kel. Jatibening Baru, Kec. Pondokgede, Kota Bekasi</p>
           </a>
-          <a href="mailto:info@pondokyatimistiqomah.id" target="_blank"
+          <a href="mailto:pondokyatimistiqomah1@gmail.com" target="_blank"
           class="flex flex-row gap-2 items-center hover:underline hover:text-istq-green">
             <Icon size="20" className="text-istq-green fill-istq-green shrink-0" src={RiBusinessMailLine} />
-            <p class="grow">info@pondokyatimistiqomah.id</p>
+            <p class="grow">pondokyatimistiqomah1@gmail.com</p>
           </a>
           <a href="tel:+6282146021999" class="flex flex-row gap-2 items-center hover:underline hover:text-istq-green">
             <Icon size="20" className="text-istq-green fill-istq-green shrink-0" src={RiDevicePhoneLine} />
-            <p class="grow">(+62) 812-8596-0701</p>
+            <p class="grow">(+62) 812-1333-9923</p>
           </a>
         </div>
       </div>

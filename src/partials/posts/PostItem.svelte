@@ -6,7 +6,7 @@
 	import Image from "@/lib/components/Image.svelte";
 
   export let post: WPPost;
-  export let preSlug: string = "/post/";
+  export let preSlug: string = "/posts/";
 
   const wpFeaturedMedia: WPAttachment[] | undefined = post?._embedded?.['wp:featuredmedia'] as WPAttachment[] | undefined;
 	const thumb: WPAttachment | undefined = wpFeaturedMedia?.[0];

@@ -22,7 +22,7 @@
 <div class="bg-istq-orange">
   <section
     class="container max-w-6xl mx-auto my-10 md:scroll-mt-28 scroll-mt-20 px-4 md:px-0"
-    id="about-us"
+    id="main-program"
   >
     <div class="flex flex-col gap-6">
       <!-- <h2 class="md:text-4xl text-3xl font-bold text-center">Program Utama</h2> -->
