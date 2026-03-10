@@ -26,10 +26,10 @@
       pauseOnHover
       arrows={false}
       dots={false}
-      class="relative z-10 h-fit md:block hidden"
+      class="relative z-10 h-fit"
     >
       {#each slideImages as img, idx}
-        <div class="relative w-full aspect-1920/854 md:block hidden">
+        <div class="relative w-full aspect-1920/854">
           {#if !imageLoaded[idx]}
             <!-- Skeleton -->
             <div class="absolute inset-0 animate-pulse bg-gray-100 flex justify-center items-center">

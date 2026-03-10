@@ -141,7 +141,7 @@
 {/if}
 
 <section
-	class="container max-w-4xl mx-auto mt-14 mb-7 md:scroll-mt-28 scroll-mt-20 px-5 md:px-0"
+	class="container max-w-4xl mx-auto md:mt-14 mt-10 mb-7 md:scroll-mt-28 scroll-mt-20 px-4 md:px-0"
 	id="company-details"
 >
 	<div class="md:gap-6 grid grid-cols-4 gap-2 items-center justify-center">
@@ -149,7 +149,7 @@
 			<button
 				onclick={() => openCompanyDetail(detail.nameUnique as CompanyDetailName)}
 				class="cursor-pointer group flex flex-col justify-center items-center
-            md:py-6 pt-4 pb-3 px-auto gap-5 rounded-xl
+            md:py-6 pt-4 pb-3 px-auto md:gap-5 gap-3 rounded-xl
             odd:bg-istq-green even:bg-istq-orange
             "
 				aria-label={detail.name}
@@ -158,9 +158,9 @@
 				<img
           src={detail.icon}
           alt={detail.name}
-          class="w-auto h-12"
+          class="w-auto md:h-12 h-10"
         />
-				<span class="md:text-xl text-base font-semibold">{detail.name}</span>
+				<span class="md:text-xl text-sm font-semibold">{detail.name}</span>
 			</button>
 		{/each}
 	</div>
