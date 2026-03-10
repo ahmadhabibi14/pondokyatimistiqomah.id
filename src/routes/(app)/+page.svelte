@@ -5,6 +5,7 @@
 	import Gallery from '@/partials/home/Gallery.svelte';
 	import Jumbotron from '@/partials/home/Jumbotron.svelte';
 	import MainProgram from '@/partials/home/MainProgram.svelte';
+	import Partners from '@/partials/home/Partners.svelte';
 	import Program from '@/partials/home/Program.svelte';
 </script>
 
@@ -16,5 +17,6 @@
 	<MainProgram />
 	<Program />
 	<Gallery />
+	<Partners />
 	<Contact />
 </div>
