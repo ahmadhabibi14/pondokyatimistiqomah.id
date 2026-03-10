@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Head from '@/partials/Head.svelte';
-	import AboutUs from '@/partials/home/AboutUs.svelte';
 	import CompanyDetails from '@/partials/home/CompanyDetails.svelte';
 	import Contact from '@/partials/home/Contact.svelte';
+	import Gallery from '@/partials/home/Gallery.svelte';
 	import Jumbotron from '@/partials/home/Jumbotron.svelte';
 	import MainProgram from '@/partials/home/MainProgram.svelte';
 	import Program from '@/partials/home/Program.svelte';
@@ -15,5 +15,6 @@
 	<CompanyDetails />
 	<MainProgram />
 	<Program />
+	<Gallery />
 	<Contact />
 </div>
