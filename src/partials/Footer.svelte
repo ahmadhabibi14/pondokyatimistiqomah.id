@@ -22,7 +22,7 @@
         <div class="flex flex-row gap-3 items-center" role="navigation">
           <a
             aria-label="Instagram"
-            href="https://www.instagram.com/qurancenter"
+            href="https://www.instagram.com/istiqomah"
             target="_blank"
             class="flex justify-center items-center p-2 rounded-full bg-white hover:bg-white/90 text-istq"
           >
@@ -33,7 +33,7 @@
           </a>
           <a
             aria-label="Facebook"
-            href="https://www.facebook.com/qurancenter"
+            href="https://www.facebook.com/istiqomah"
             target="_blank"
             class="flex justify-center items-center p-2 rounded-full bg-white hover:bg-white/90 text-istq"
           >
@@ -44,7 +44,7 @@
           </a>
           <a
             aria-label="YouTube"
-            href="https://www.youtube.com/channel/qurancenter"
+            href="https://www.youtube.com/channel/istiqomah"
             target="_blank"
             class="flex justify-center items-center p-2 rounded-full bg-white hover:bg-white/90 text-istq"
           >
@@ -55,7 +55,7 @@
           </a>
           <a
             aria-label="X (Twitter)"
-            href="https://www.x.com/qurancenter"
+            href="https://www.x.com/istiqomah"
             target="_blank"
             class="flex justify-center items-center p-2 rounded-full bg-white hover:bg-white/90 text-istq"
           >
@@ -66,7 +66,7 @@
           </a>
           <a
             aria-label="WhatsApp"
-            href="https://wa.me/6281285960701"
+            href="https://wa.me/6281213339923"
             target="_blank"
             class="flex justify-center items-center p-2 rounded-full bg-white hover:bg-white/90 text-istq"
           >
@@ -101,7 +101,7 @@ Kel. Jatibening Baru, Kec. Pondokgede, Kota Bekasi</p>
             <Icon size="20" className="text-istq-green fill-istq-green shrink-0" src={RiBusinessMailLine} />
             <p class="grow">pondokyatimistiqomah1@gmail.com</p>
           </a>
-          <a href="tel:+6282146021999" class="flex flex-row gap-2 items-center hover:underline hover:text-istq-green">
+          <a href="tel:+6281213339923" class="flex flex-row gap-2 items-center hover:underline hover:text-istq-green">
             <Icon size="20" className="text-istq-green fill-istq-green shrink-0" src={RiDevicePhoneLine} />
             <p class="grow">(+62) 812-1333-9923</p>
           </a>

@@ -30,7 +30,8 @@
 			descList: ['Sasaran: 5 guru ngaji', 'Anggaran: Rp5.000.000']
 		},
 		{
-			title: 'Paket Wakaf Jariyah Ramadhan'
+			title: 'Paket Wakaf Jariyah Ramadhan',
+			descList: ['Untuk pelunasan Lahan (±600 m²)', 'Kebutuhan : Rp. 1.100.000.000,- ']
 		}
 	];
 </script>

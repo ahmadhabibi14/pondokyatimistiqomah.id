@@ -107,7 +107,7 @@
 			<a href="/ramadhan" class="hover:text-istq-orange">Ramadhan 1447</a>
 		</nav>
 		<a
-			href="https://wa.me/6281285960701"
+			href="https://wa.me/6281213339923"
 			class="md:block hidden w-fit h-fit cursor-pointer py-2 px-8 font-medium rounded-full text-istq bg-istq-orange hover:bg-istq-orange-darker text-sm"
 		>
 			Donasi
@@ -132,7 +132,7 @@
   -translate-y-full
   "
 >
-	<div class="flex flex-col gap-3 py-5 font-medium">
+	<div class="flex flex-col gap-3 pt-5 pb-3 font-medium">
 		<a href="/" class="hover:text-qc px-5" onclick={closeNavbar}>Beranda</a>
 		<span class="h-px w-full border-t border-dashed border-gray-300"></span>
 		<NavMenuItems
@@ -162,5 +162,16 @@
 		<a href="/posts" class="hover:text-qc px-5" onclick={closeNavbar}>Artikel</a>
 		<span class="h-px w-full border-t border-dashed border-gray-300"></span>
 		<a href="/ramadhan" class="hover:text-qc px-5" onclick={closeNavbar}>Ramadhan 1447</a>
+		<span class="h-px w-full border-t border-dashed border-gray-300"></span>
+		<div class="w-full flex px-4">
+			<a
+			href="https://wa.me/6281213339923"
+			class="w-full h-fit cursor-pointer py-2 px-8
+			font-medium rounded-full text-istq bg-istq-orange hover:bg-istq-orange-darker
+			text-sm text-center"
+		>
+			Donasi
+		</a>
+		</div>
 	</div>
 </aside>
