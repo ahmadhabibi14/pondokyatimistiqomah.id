@@ -82,7 +82,7 @@
         <nav class="flex flex-col gap-1">
           <a href="/profil" class="hover:underline hover:text-istq-green">Profil</a>
           <a href="/program" class="hover:underline hover:text-istq-green">Program</a>
-          <a href="/#layanan" class="hover:underline hover:text-istq-green">Layanan</a>
+          <a href="/layanan" class="hover:underline hover:text-istq-green">Layanan</a>
           <a href="/posts" class="hover:underline hover:text-istq-green">Artikel</a>
         </nav>
       </div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Image from '@/lib/components/Image.svelte';
 	import Head from '@/partials/Head.svelte';
 	import CompanyDetails from '@/partials/home/CompanyDetails.svelte';
 	import Contact from '@/partials/home/Contact.svelte';
@@ -18,9 +19,33 @@
 	<CompanyDetails />
 	<MainProgram />
 	<Program />
-	<Gallery />
-	<YouTubeChannel />
 	<LatestNews />
+	<section class="container max-w-6xl mx-auto flex px-4 md:px-0 mt-10 mb-12">
+		<div
+			class="flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-7
+		items-center h-[400px]"
+		>
+			<a href="https://www.youtube.com/@PondokYatimIstiqomah/"
+			target="_blank"
+			aria-label="YouTube Channel Pondok Yatim Istiqomah"
+			class="group">
+				<Image
+					src="/img/yt-channel.png"
+					alt="YouTube Channel"
+					classNameContainer="rounded-3xl overflow-hidden group-hover:drop-shadow-lg transition-shadow duration-300"
+					classNameImg="w-full h-full object-cover"
+				/>
+			</a>
+			<a href="/gallery" aria-label="Gallery Pondok Yatim Istiqomah" class="group">
+				<Image
+					src="/img/gallery.png"
+					alt="Gallery"
+					classNameContainer="rounded-3xl overflow-hidden group-hover:drop-shadow-lg transition-shadow duration-300"
+					classNameImg="w-full h-full object-cover"
+				/>
+			</a>
+		</div>
+	</section>
 	<Partners />
 	<Contact />
 </div>

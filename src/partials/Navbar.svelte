@@ -102,7 +102,7 @@
 					</HoverCard.Content>
 				</HoverCard.Root>
 			</a>
-			<a href="/#main-program" class="hover:text-istq-orange">Layanan</a>
+			<a href="/layanan" class="hover:text-istq-orange">Layanan</a>
 			<a href="/posts" class="hover:text-istq-orange">Artikel</a>
 			<a href="/ramadhan" class="hover:text-istq-orange">Ramadhan 1447</a>
 		</nav>
@@ -157,7 +157,7 @@
 			]}
 		/>
 		<span class="h-px w-full border-t border-dashed border-gray-300"></span>
-		<a href="/#main-program" class="hover:text-qc px-5" onclick={closeNavbar}>Layanan</a>
+		<a href="/layanan" class="hover:text-qc px-5" onclick={closeNavbar}>Layanan</a>
 		<span class="h-px w-full border-t border-dashed border-gray-300"></span>
 		<a href="/posts" class="hover:text-qc px-5" onclick={closeNavbar}>Artikel</a>
 		<span class="h-px w-full border-t border-dashed border-gray-300"></span>

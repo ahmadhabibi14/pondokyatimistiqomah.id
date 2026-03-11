@@ -45,7 +45,7 @@
 					<p class="grow">(+62) 812-1333-9923</p>
 				</a>
 			</div>
-			<div class="w-full h-[400px] rounded-xl overflow-hidden">
+			<div class="w-full h-[300px] rounded-xl overflow-hidden">
 				<iframe
 					title="Lokasi Pondok Yatim Istiqomah"
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.000477270892!2d106.94354969999999!3d-6.2636657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d1a6e123dd7%3A0x4f12099bbd30615a!2sPondok%20Yatim%20Istiqomah!5e0!3m2!1sid!2sid!4v1772599107371!5m2!1sid!2sid"
