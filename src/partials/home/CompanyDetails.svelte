@@ -160,7 +160,7 @@
           alt={detail.name}
           class="w-auto md:h-12 h-10"
         />
-				<span class="md:text-xl text-sm font-semibold">{detail.name}</span>
+				<span class="md:text-xl text-xs font-medium">{detail.name}</span>
 			</button>
 		{/each}
 	</div>

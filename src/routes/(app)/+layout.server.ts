@@ -11,8 +11,8 @@ export const load: LayoutServerLoad = async (event: ServerLoadEvent) => {
       "script-src 'self' 'unsafe-inline' https://maps.googleapis.com https://maps.gstatic.com http://localhost:80 https://admin.pondokyatimistiqomah.id; " +
       "style-src 'self' 'unsafe-inline'; " +
       "font-src 'self'; " +
-      "img-src 'self' data: ; " +
-      "frame-src https://www.google.com https://maps.google.com 'self' http://localhost:80 https://admin.pondokyatimistiqomah.id; " +
+      "img-src 'self' data: http://localhost:80 https://admin.pondokyatimistiqomah.id; " +
+      "frame-src https://www.youtube.com https://youtube.com https://m.youtube.com https://www.google.com https://maps.google.com 'self' http://localhost:80 https://admin.pondokyatimistiqomah.id; " +
       "connect-src 'self' http://localhost:80 https://admin.pondokyatimistiqomah.id; " +
       "object-src 'none'; " +
       "base-uri 'none';"

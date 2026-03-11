@@ -22,7 +22,7 @@
         <div class="flex flex-row gap-3 items-center" role="navigation">
           <a
             aria-label="Instagram"
-            href="https://www.instagram.com/istiqomah"
+            href="https://www.instagram.com/pondok_yatim_istiqomah"
             target="_blank"
             class="flex justify-center items-center p-2 rounded-full bg-white hover:bg-white/90 text-istq"
           >
