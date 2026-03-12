@@ -28,7 +28,7 @@
 			<a href="https://www.youtube.com/@PondokYatimIstiqomah/"
 			target="_blank"
 			aria-label="YouTube Channel Pondok Yatim Istiqomah"
-			class="group">
+			class="group px-3">
 				<Image
 					src="/img/yt-channel.png"
 					alt="YouTube Channel"
@@ -36,11 +36,13 @@
 					classNameImg="w-full h-full object-cover"
 				/>
 			</a>
-			<a href="/gallery" aria-label="Gallery Pondok Yatim Istiqomah" class="group">
+			<a href="/gallery"
+			aria-label="Gallery Pondok Yatim Istiqomah"
+			class="group pt-2">
 				<Image
 					src="/img/gallery.png"
 					alt="Gallery"
-					classNameContainer="rounded-3xl overflow-hidden group-hover:drop-shadow-lg transition-shadow duration-300"
+					classNameContainer="mt-2 rounded-3xl overflow-hidden group-hover:drop-shadow-lg transition-shadow duration-300"
 					classNameImg="w-full h-full object-cover"
 				/>
 			</a>

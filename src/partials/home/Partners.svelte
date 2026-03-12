@@ -11,6 +11,8 @@
     {name: 'Majelis Ulama Indonesia', imgUrl: '/img/partners/mui.png'},
     {name: 'Pemerintah Provinsi Bekasi', imgUrl: '/img/partners/pemprov-bekasi.png'},
     {name: 'Telkomsel', imgUrl: '/img/partners/telkomsel.png'},
+    {name: 'Bank BNI', imgUrl: '/img/partners/bni.png'},
+    {name: 'Pertamina Lubricants', imgUrl: '/img/partners/pertamina-lubricants.png'},
   ]
 </script>
 

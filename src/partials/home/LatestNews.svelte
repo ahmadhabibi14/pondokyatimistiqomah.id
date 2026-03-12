@@ -15,7 +15,7 @@
 	async function fetchPosts() {
 		isLoading = true;
 
-		const res = await fetch(`${PUBLIC_API_URL}/posts?_embed&limit=4`);
+		const res = await fetch(`${PUBLIC_API_URL}/posts?_embed&per_page=4`);
 
 		if (!res.ok) {
 			isLoading = false;
@@ -43,6 +43,16 @@
 					<PostItem {post} />
 				{/each}
 			{/if}
+		</div>
+		<div class="flex justify-center items-center">
+			<a
+				href="/berita"
+				aria-label="Berita lainnya"
+				class="bg-istq text-white px-6 py-2 rounded-full
+			hover:underline h-fit w-fit text-sm md:text-base"
+			>
+				Berita Lainnya...
+			</a>
 		</div>
 	</div>
 </div>
