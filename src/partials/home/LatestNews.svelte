@@ -46,7 +46,7 @@
 		</div>
 		<div class="flex justify-center items-center">
 			<a
-				href="/berita"
+				href="/posts"
 				aria-label="Berita lainnya"
 				class="bg-istq text-white px-6 py-2 rounded-full
 			hover:underline h-fit w-fit text-sm md:text-base"
