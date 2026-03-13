@@ -1,9 +1,12 @@
 <script lang="ts">
 	import Navbar from '@/partials/Navbar.svelte';
 	import Footer from '@/partials/Footer.svelte';
-	
+	import WhatsAppButton from '@/partials/WhatsAppButton.svelte';
+
 	let { children } = $props();
 </script>
+
+<WhatsAppButton />
 
 <div class="bg-white text-jhc-dark top-0 mt-24 bottom-0 left-0 right-0 overflow-x-hidden">
 	<div class="w-full h-full flex flex-col max-w-full">

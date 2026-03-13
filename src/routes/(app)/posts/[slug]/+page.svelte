@@ -19,9 +19,10 @@
 		exist: boolean;
 	};
 
-	function handleImgSrcError(event: any) {
-		event.target.onerror = null;
-		event.target.src = '/img/placeholder.png';
+	function handleImgSrcError(event: Event): void {
+		const target = event.currentTarget as HTMLImageElement;
+		target.onerror = null;
+		target.src = '/img/placeholder.png';
 	}
 
 	const wpFeaturedMedia = post?._embedded?.['wp:featuredmedia'] as WPAttachment[] | undefined;
@@ -35,17 +36,15 @@
 
 	const authorName = capitalizeWords(author?.name ?? SiteAuthor);
 
-  let tags: WPTag[] = [];
+	let tags: WPTag[] = [];
 
-  onMount(async () => {
-    if (post?.tags && post?.tags?.length > 0) {
-      const tagRes = await fetch(
-        `${PUBLIC_API_URL}/tags?include=${post.tags.join(',')}`
-      );
+	onMount(async () => {
+		if (post?.tags && post?.tags?.length > 0) {
+			const tagRes = await fetch(`${PUBLIC_API_URL}/tags?include=${post.tags.join(',')}`);
 
-      tags = await tagRes.json() as WPTag[];
-    }
-  })
+			tags = (await tagRes.json()) as WPTag[];
+		}
+	});
 </script>
 
 {#if exist && post}
@@ -60,7 +59,7 @@
 		publishedTime={post.date_gmt}
 		modifiedTime={post.modified_gmt}
 		author={authorName}
-		tags={(tags ?? []).map(tag => tag.name)}
+		tags={(tags ?? []).map((tag) => tag.name)}
 	/>
 {:else}
 	<!-- SEO Not Found -->
@@ -97,34 +96,24 @@
 			>
 				<div class="not-prose text-gray-600 text-sm mb-6 flex flex-row gap-1 md:gap-2 items-center">
 					<a href="/" class="flex flex-row items-center gap-1 md:gap-2 hover:underline">
-						<Icon
-							src={RiBuildingsHome4Line}
-							size="15"
-							className="text-istq fill-istq shrink-0"
-						/>
+						<Icon src={RiBuildingsHome4Line} size="15" className="text-istq fill-istq shrink-0" />
 						<span>Beranda</span>
 					</a>
-					<Icon
-						src={RiArrowsArrowRightSLine}
-						size="15"
-						className="text-istq fill-istq shrink-0"
-					/>
+					<Icon src={RiArrowsArrowRightSLine} size="15" className="text-istq fill-istq shrink-0" />
 					<a href="/posts" class="hover:underline"> Berita </a>
-					<Icon
-						src={RiArrowsArrowRightSLine}
-						size="15"
-						className="text-istq fill-istq shrink-0"
-					/>
+					<Icon src={RiArrowsArrowRightSLine} size="15" className="text-istq fill-istq shrink-0" />
 					<span class="line-clamp-1">
 						{@html post.title?.rendered}
 					</span>
 				</div>
 
-        <!-- Title -->
+				<!-- Title -->
 				<h1>{@html post.title?.rendered}</h1>
 
 				<!-- Meta, Author, Date/Time -->
-				<div class="not-prose text-gray-600 flex flex-col md:flex-row gap-1 md:gap-2 md:items-center mb-6">
+				<div
+					class="not-prose text-gray-600 flex flex-col md:flex-row gap-1 md:gap-2 md:items-center mb-6"
+				>
 					<p class="text-base md:text-lg">
 						oleh <b>{authorName}</b>
 					</p>
@@ -157,29 +146,28 @@
 					{@html (post.content?.rendered ?? '').replace(/<p(\s|>)/g, '<p dir="auto"$1')}
 				</article>
 
-        <div class="not-prose flex flex-col gap-6">
-          <div class="w-full bg-sky-400/20 py-4 px-5 text-sm">
-            <p>Dilarang keras mengambil konten, melakukan crawling atau pengindeksan otomatis untuk AI di situs web ini tanpa izin tertulis dari pihak Yayasan Pondok Yatim Istiqomah.</p>
-          </div>
-        </div>
+				<div class="not-prose flex flex-col gap-6">
+					<div class="w-full bg-sky-400/20 py-4 px-5 text-sm">
+						<p>
+							Dilarang keras mengambil konten, melakukan crawling atau pengindeksan otomatis untuk
+							AI di situs web ini tanpa izin tertulis dari pihak Yayasan Pondok Yatim Istiqomah.
+						</p>
+					</div>
+				</div>
 
-        <!-- TAGS -->
-        {#if tags && tags?.length > 0}
-          <div class="not-prose flex flex-wrap items-center gap-2 mt-5 text-sm">
-            <div>
-              <Icon
-                src={FaSolidTags}
-                size="20"
-                className="text-istq fill-istq shrink-0"
-              />
-            </div>
-            {#each tags as tag}
-              <span class="bg-white border border-gray-300 px-3 py-1 rounded-md">
-                {tag.name}
-              </span>
-            {/each}
-          </div>
-        {/if}
+				<!-- TAGS -->
+				{#if tags && tags?.length > 0}
+					<div class="not-prose flex flex-wrap items-center gap-2 mt-5 text-sm">
+						<div>
+							<Icon src={FaSolidTags} size="20" className="text-istq fill-istq shrink-0" />
+						</div>
+						{#each tags as tag (tag.id)}
+							<span class="bg-white border border-gray-300 px-3 py-1 rounded-md">
+								{tag.name}
+							</span>
+						{/each}
+					</div>
+				{/if}
 			</div>
 		</div>
 	{:else}

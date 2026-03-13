@@ -35,11 +35,11 @@
 		<h2 class="md:text-4xl text-3xl font-bold text-center">Berita Terbaru</h2>
 		<div class="grid grid-cols-2 md:grid-cols-4 gap-5 w-full min-w-full auto-rows-fr">
 			{#if isLoading}
-				{#each Array(4) as _}
+				{#each Array(4)}
 					<Skeleton class="h-36 md:h-56 w-full rounded-lg border border-gray-200" />
 				{/each}
 			{:else}
-				{#each posts || [] as post}
+				{#each posts || [] as post (post.id)}
 					<PostItem {post} />
 				{/each}
 			{/if}

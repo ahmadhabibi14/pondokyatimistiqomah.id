@@ -44,7 +44,7 @@
 			<h1 class="font-bold text-3xl md:text-5xl">Program Ramadhan 1447 H</h1>
 		</div>
 		<div class="md:grid md:grid-cols-3 flex flex-col gap-4">
-			{#each programRamadhan as program, idx}
+			{#each programRamadhan as program, idx (program.title)}
 				<div
 					class="flex flex-col justify-start items-center gap-4
 					pt-5 pb-4 px-5
@@ -59,7 +59,7 @@
 						<h2 class="text-base font-bold grow">{program.title}</h2>
 						{#if program.descList}
 							<ul class="list-disc list-inside mt-2 text-sm">
-								{#each program.descList as desc}
+								{#each program.descList as desc (desc)}
 									<li>{desc}</li>
 								{/each}
 							</ul>

@@ -57,7 +57,7 @@
 {/if}
 
 {#if isNavigating}
-  <div class="fixed inset-0 bg-white flex items-center justify-center z-50">
+	<div class="fixed inset-0 bg-white flex items-center justify-center z-50">
 		<p>Loading...</p>
-  </div>
+	</div>
 {/if}

@@ -106,7 +106,7 @@
 {/if}
 
 {#if isPopUpCompanyDetailOpen}
-  {@const content = CompanyDetailsObj[openedCompanyDetail].content}
+	{@const content = CompanyDetailsObj[openedCompanyDetail].content}
 	<div class="popup-container">
 		<div class="rounded-xl bg-white p-6 flex flex-col gap-4 md:w-7/12 lg:6/12 h-fit">
 			<header class="flex justify-between items-center flex-row">
@@ -124,7 +124,7 @@
 			{#if Array.isArray(content)}
 				<div class="flex ml-6 text-lg">
 					<ul class="list-disc marker:text-istq-green-darker marker:text-lg">
-						{#each content as misi}
+						{#each content as misi (misi)}
 							<li>
 								{misi}
 							</li>
@@ -145,7 +145,7 @@
 	id="company-details"
 >
 	<div class="md:gap-6 grid grid-cols-4 gap-2 items-center justify-center">
-		{#each companyDetails as detail}
+		{#each companyDetails as detail (detail.nameUnique)}
 			<button
 				onclick={() => openCompanyDetail(detail.nameUnique as CompanyDetailName)}
 				class="cursor-pointer group flex flex-col justify-center items-center
@@ -155,11 +155,7 @@
 				aria-label={detail.name}
 				title={detail.name}
 			>
-				<img
-          src={detail.icon}
-          alt={detail.name}
-          class="w-auto md:h-12 h-10"
-        />
+				<img src={detail.icon} alt={detail.name} class="w-auto md:h-12 h-10" />
 				<span class="md:text-xl text-xs font-medium">{detail.name}</span>
 			</button>
 		{/each}

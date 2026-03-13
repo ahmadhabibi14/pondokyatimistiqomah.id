@@ -1,149 +1,148 @@
 <script lang="ts">
-  import Head from "@/partials/Head.svelte";
-	import { onMount } from "svelte";
-	import PostItem from "@/partials/posts/PostItem.svelte";
-	import Pagination from "@/partials/posts/Pagination.svelte";
-	import { PUBLIC_API_URL } from "$env/static/public";
-	import type { WPPost } from "@/types/post";
-	import Skeleton from "@/lib/components/ui/skeleton/skeleton.svelte";
+	import Head from '@/partials/Head.svelte';
+	import { onMount } from 'svelte';
+	import PostItem from '@/partials/posts/PostItem.svelte';
+	import Pagination from '@/partials/posts/Pagination.svelte';
+	import { PUBLIC_API_URL } from '$env/static/public';
+	import type { WPPost } from '@/types/post';
+	import Skeleton from '@/lib/components/ui/skeleton/skeleton.svelte';
 
-  let posts: WPPost[] = [];
+	let posts: WPPost[] = [];
 
-  let isLoading: boolean = false;
+	let isLoading: boolean = false;
 
-  let totalPages: number = 0;
-  let currentRows: number = 10;
+	let totalPages: number = 0;
+	let currentRows: number = 10;
 
-  let paginationsAll: number[] = [];
-  let paginationShow: number[] = [];
-  let currentPage = 1;
+	let paginationsAll: number[] = [];
+	let paginationShow: number[] = [];
+	let currentPage = 1;
 
-  // ================================
-  // FETCH POSTS (Reusable)
-  // ================================
-  async function fetchPosts() {
-    isLoading = true;
+	// ================================
+	// FETCH POSTS (Reusable)
+	// ================================
+	async function fetchPosts() {
+		isLoading = true;
 
-    const res = await fetch(
-      `${PUBLIC_API_URL}/posts?_embed&per_page=${currentRows}&page=${currentPage}`
-    );
+		const res = await fetch(
+			`${PUBLIC_API_URL}/posts?_embed&per_page=${currentRows}&page=${currentPage}`
+		);
 
-    if (!res.ok) {
-      isLoading = false;
-      return;
-    }
+		if (!res.ok) {
+			isLoading = false;
+			return;
+		}
 
-    posts = await res.json() as WPPost[];
-    // total = Number(res.headers.get("X-WP-Total") ?? 0);
-    totalPages = Number(res.headers.get("X-WP-TotalPages") ?? 0);
+		posts = (await res.json()) as WPPost[];
+		// total = Number(res.headers.get("X-WP-Total") ?? 0);
+		totalPages = Number(res.headers.get('X-WP-TotalPages') ?? 0);
 
-    paginate();
-    isLoading = false;
-  }
+		paginate();
+		isLoading = false;
+	}
 
-  // ================================
-  // PAGINATION CALCULATION
-  // ================================
-  function paginate(): void {
-    paginationsAll = [];
+	// ================================
+	// PAGINATION CALCULATION
+	// ================================
+	function paginate(): void {
+		paginationsAll = [];
 
-    for (let i = 1; i <= totalPages; i++) {
-      paginationsAll.push(i);
-    }
+		for (let i = 1; i <= totalPages; i++) {
+			paginationsAll.push(i);
+		}
 
-    let start = 0;
-    let end = 0;
+		let start = 0;
+		let end = 0;
 
-    if (totalPages <= 5) {
-      start = 0;
-      end = totalPages;
-    } else if (currentPage <= 3) {
-      start = 0;
-      end = 5;
-    } else if (currentPage >= totalPages - 2) {
-      start = totalPages - 5;
-      end = totalPages;
-    } else {
-      start = currentPage - 3;
-      end = currentPage + 2;
-    }
+		if (totalPages <= 5) {
+			start = 0;
+			end = totalPages;
+		} else if (currentPage <= 3) {
+			start = 0;
+			end = 5;
+		} else if (currentPage >= totalPages - 2) {
+			start = totalPages - 5;
+			end = totalPages;
+		} else {
+			start = currentPage - 3;
+			end = currentPage + 2;
+		}
 
-    paginationShow = paginationsAll.slice(start, end);
-  }
+		paginationShow = paginationsAll.slice(start, end);
+	}
 
-  // ================================
-  // PAGINATION ACTIONS
-  // ================================
+	// ================================
+	// PAGINATION ACTIONS
+	// ================================
 
-  async function ToPage(page: number) {
-    if (page === currentPage) return;
-    currentPage = page;
-    await fetchPosts();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+	async function ToPage(page: number) {
+		if (page === currentPage) return;
+		currentPage = page;
+		await fetchPosts();
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
 
-  async function NextPage() {
-    if (currentPage >= totalPages) return;
-    currentPage += 1;
-    await fetchPosts();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+	async function NextPage() {
+		if (currentPage >= totalPages) return;
+		currentPage += 1;
+		await fetchPosts();
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
 
-  async function PrevPage() {
-    if (currentPage <= 1) return;
-    currentPage -= 1;
-    await fetchPosts();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+	async function PrevPage() {
+		if (currentPage <= 1) return;
+		currentPage -= 1;
+		await fetchPosts();
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
 
-  async function FirstPage() {
-    if (currentPage === 1) return;
-    currentPage = 1;
-    await fetchPosts();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+	async function FirstPage() {
+		if (currentPage === 1) return;
+		currentPage = 1;
+		await fetchPosts();
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
 
-  async function LastPage() {
-    if (currentPage === totalPages) return;
-    currentPage = totalPages;
-    await fetchPosts();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+	async function LastPage() {
+		if (currentPage === totalPages) return;
+		currentPage = totalPages;
+		await fetchPosts();
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
 
-  onMount(fetchPosts);
+	onMount(fetchPosts);
 </script>
 
 <Head
-  title="Berita & Artikel - Pondok Yatim ISTIQOMAH"
-  description="Artikel informatik seputar kegiatan, berita, dan informasi penting lainnya seputar Pondok Yatim ISTIQOMAH."
-  path="/posts"
+	title="Berita & Artikel - Pondok Yatim ISTIQOMAH"
+	description="Artikel informatik seputar kegiatan, berita, dan informasi penting lainnya seputar Pondok Yatim ISTIQOMAH."
+	path="/posts"
 />
 
 <div class="h-auto w-full flex flex-col">
-  <div class="container max-w-6xl mx-auto flex flex-col gap-8 my-10 px-5 md:px-0">
-    <div class="flex flex-col gap-6">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 w-full min-w-full auto-rows-fr">
-        {#if isLoading}
-          {#each Array(4) as _}
-            <Skeleton class="h-36 md:h-56 w-full rounded-lg border border-gray-200" />
-          {/each}
-        {:else}
-          {#each (posts || []) as post}
-            <PostItem {post} />
-          {/each}
-        {/if}
-      </div>
-      <Pagination
-        bind:currentPage
-        bind:paginationShow
-        bind:paginationTotal={totalPages}
-
-        OnPrevPage={PrevPage}
-        OnNextPage={NextPage}
-        OnFirstPage={FirstPage}
-        OnLastPage={LastPage}
-        OnToPage={ToPage}
-      />
-    </div>
-  </div>
+	<div class="container max-w-6xl mx-auto flex flex-col gap-8 my-10 px-5 md:px-0">
+		<div class="flex flex-col gap-6">
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-5 w-full min-w-full auto-rows-fr">
+				{#if isLoading}
+					{#each Array(4)}
+						<Skeleton class="h-36 md:h-56 w-full rounded-lg border border-gray-200" />
+					{/each}
+				{:else}
+					{#each posts || [] as post (post.id)}
+						<PostItem {post} />
+					{/each}
+				{/if}
+			</div>
+			<Pagination
+				bind:currentPage
+				bind:paginationShow
+				bind:paginationTotal={totalPages}
+				OnPrevPage={PrevPage}
+				OnNextPage={NextPage}
+				OnFirstPage={FirstPage}
+				OnLastPage={LastPage}
+				OnToPage={ToPage}
+			/>
+		</div>
+	</div>
 </div>

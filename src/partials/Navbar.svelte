@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { Icon } from 'svelte-icons-pack';
 	import { BsList, BsX } from 'svelte-icons-pack/bs';
-	import {
-		RiArrowsArrowDownSLine
-	} from 'svelte-icons-pack/ri';
+	import { RiArrowsArrowDownSLine, RiLogosWhatsappLine } from 'svelte-icons-pack/ri';
 	import * as HoverCard from '$lib/components/ui/hover-card/index.js';
 	import { NAVBAR_OPEN } from '@/states/navbar';
 	import { ProgramsShort } from '@/data/programs';
@@ -22,9 +20,12 @@
 		class="h-full px-4 md:px-0 container max-w-6xl flex flex-row items-center justify-between mx-auto"
 	>
 		<div class="flex flex-row gap-3 items-center">
-			<a href="/" class="w-fit h-fit
+			<a
+				href="/"
+				class="w-fit h-fit
 				focus:outline-none focus:ring-0 focus:ring-offset-0
-				flex flex-row items-center gap-2">
+				flex flex-row items-center gap-2"
+			>
 				<img
 					src="/icons/logo.png"
 					alt="Pondok Yatim Istiqomah Logo"
@@ -89,9 +90,9 @@
 					</HoverCard.Trigger>
 					<HoverCard.Content class="z-100 px-2 py-3 w-[300px]">
 						<div class="flex flex-col text-sm">
-							{#each ProgramsShort as pg}
+							{#each ProgramsShort as pg (pg.link)}
 								<a
-									href="{pg.link}"
+									href={pg.link}
 									data-sveltekit-reload
 									class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
 								>
@@ -108,9 +109,12 @@
 		</nav>
 		<a
 			href="https://wa.me/6281213339923"
-			class="md:block hidden w-fit h-fit cursor-pointer py-2 px-8 font-medium rounded-full text-istq bg-istq-orange hover:bg-istq-orange-darker text-sm"
+			class="md:flex hidden w-fit h-fit cursor-pointer py-2 px-8
+			font-medium rounded-full text-istq bg-istq-orange hover:bg-istq-orange-darker
+			text-sm flex-row gap-1.5 items-center justify-center"
 		>
-			Donasi
+			<Icon src={RiLogosWhatsappLine} size="17" className="" />
+			<span>Donasi</span>
 		</a>
 		<div class="flex md:hidden">
 			<button type="button" onclick={() => ($NAVBAR_OPEN = !$NAVBAR_OPEN)} class="">
@@ -165,13 +169,14 @@
 		<span class="h-px w-full border-t border-dashed border-gray-300"></span>
 		<div class="w-full flex px-4">
 			<a
-			href="https://wa.me/6281213339923"
-			class="w-full h-fit cursor-pointer py-2 px-8
+				href="https://wa.me/6281213339923"
+				class="w-full h-fit cursor-pointer py-2 px-8
 			font-medium rounded-full text-istq bg-istq-orange hover:bg-istq-orange-darker
-			text-sm text-center"
-		>
-			Donasi
-		</a>
+			text-sm text-center flex flex-row gap-1.5 items-center justify-center"
+			>
+				<Icon src={RiLogosWhatsappLine} size="17" className="" />
+				<span>Donasi</span>
+			</a>
 		</div>
 	</div>
 </aside>

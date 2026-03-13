@@ -2,14 +2,11 @@
 	import Image from '@/lib/components/Image.svelte';
 	import Head from '@/partials/Head.svelte';
 	import CompanyDetails from '@/partials/home/CompanyDetails.svelte';
-	import Contact from '@/partials/home/Contact.svelte';
-	import Gallery from '@/partials/home/Gallery.svelte';
 	import Jumbotron from '@/partials/home/Jumbotron.svelte';
 	import LatestNews from '@/partials/home/LatestNews.svelte';
 	import MainProgram from '@/partials/home/MainProgram.svelte';
 	import Partners from '@/partials/home/Partners.svelte';
 	import Program from '@/partials/home/Program.svelte';
-	import YouTubeChannel from '@/partials/home/YouTubeChannel.svelte';
 </script>
 
 <Head title="Pondok Yatim Istiqomah" />
@@ -25,10 +22,12 @@
 			class="flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-7
 		items-center h-[400px]"
 		>
-			<a href="https://www.youtube.com/@PondokYatimIstiqomah/"
-			target="_blank"
-			aria-label="YouTube Channel Pondok Yatim Istiqomah"
-			class="group px-3">
+			<a
+				href="https://www.youtube.com/@PondokYatimIstiqomah/"
+				target="_blank"
+				aria-label="YouTube Channel Pondok Yatim Istiqomah"
+				class="group px-3"
+			>
 				<Image
 					src="/img/yt-channel.png"
 					alt="YouTube Channel"
@@ -36,9 +35,7 @@
 					classNameImg="w-full h-full object-cover"
 				/>
 			</a>
-			<a href="/gallery"
-			aria-label="Gallery Pondok Yatim Istiqomah"
-			class="group pt-2">
+			<a href="/gallery" aria-label="Gallery Pondok Yatim Istiqomah" class="group pt-2">
 				<Image
 					src="/img/gallery.png"
 					alt="Gallery"
@@ -49,5 +46,5 @@
 		</div>
 	</section>
 	<Partners />
-	<Contact />
+	<!-- <Contact /> -->
 </div>

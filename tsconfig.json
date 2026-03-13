@@ -11,10 +11,7 @@
 		"strict": true,
 		"moduleResolution": "bundler",
 		"allowArbitraryExtensions": true,
-		"typeRoots": [
-			"./node_modules/@types",
-			"./src/types"
-		]
+		"typeRoots": ["./node_modules/@types", "./src/types"]
 	}
 	// Path aliases are handled by https://svelte.dev/docs/kit/configuration#alias
 	// except $lib which is handled by https://svelte.dev/docs/kit/configuration#files

@@ -10,12 +10,12 @@
 
 <div class="w-full h-auto">
 	<div class="container max-w-6xl mx-auto px-4 md:px-0 my-10 flex flex-col">
-		<div class="text-center w-full">
-			<h1 class="font-bold text-3xl md:text-5xl">Profil Pondok Yatim Istiqomah</h1>
+		<div class="text-center w-full border-b-2 border-dashed border-gray-300 pb-5">
+			<h1 class="font-bold text-4xl md:text-5xl">Profil Pondok Yatim Istiqomah</h1>
 		</div>
 		<AboutUs />
-    <VisiMisi />
-    <Struktur />
+		<VisiMisi />
+		<Struktur />
 		<MaknaLogo />
 	</div>
 </div>

@@ -18,21 +18,18 @@
 
 	$effect(() => {
 		if ($NAVBAR_OPEN == false) {
-			isShowMenu = false
+			isShowMenu = false;
 		}
-	})
+	});
 
-  function closeNavbar() {
-    isShowMenu = false;
-    NAVBAR_OPEN.set(false);
+	function closeNavbar() {
+		isShowMenu = false;
+		NAVBAR_OPEN.set(false);
 	}
 </script>
 
 <div class="flex flex-col gap-0 px-5">
-	<button
-		class="flex flex-row items-center gap-1"
-		onclick={() => (isShowMenu = !isShowMenu)}
-	>
+	<button class="flex flex-row items-center gap-1" onclick={() => (isShowMenu = !isShowMenu)}>
 		<span>{name}</span>
 		<Icon
 			src={RiArrowsArrowDownSLine}
@@ -49,8 +46,8 @@
     {isShowMenu ? 'max-h-96 mt-2' : ''}
     "
 	>
-		<div class="flex flex-col text-sm ">
-			{#each links as l}
+		<div class="flex flex-col text-sm">
+			{#each links as l (l.name)}
 				<a href={l.link} class="py-0.5" onclick={closeNavbar} data-sveltekit-reload>
 					{l.name}
 				</a>

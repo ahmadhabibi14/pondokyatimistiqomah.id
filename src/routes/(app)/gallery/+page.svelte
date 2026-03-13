@@ -22,7 +22,7 @@
 			<h1 class="font-bold text-3xl md:text-5xl">Galeri Pondok Yatim Istiaomah</h1>
 		</div>
 		<div class="grid grid-cols-2 md:grid-cols-4 md:gap-4 gap-2">
-			{#each galleryImages as images, idx}
+			{#each galleryImages as images, idx (idx)}
 				<div class="grid md:gap-3 gap-2">
 					<Image
 						src={images[0]}

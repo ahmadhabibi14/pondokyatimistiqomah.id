@@ -41,19 +41,19 @@
 	];
 </script>
 
-<section class="my-10 md:scroll-mt-28 scroll-mt-20" id="logo">
+<section class="my-7 md:my-10 md:scroll-mt-28 scroll-mt-20" id="logo">
 	<div class="flex flex-col gap-6">
-		<h2 class="text-4xl font-bold">Makna dan Nilai Logo</h2>
+		<h2 class="text-3xl md:text-4xl font-bold">Makna dan Nilai Logo</h2>
 		<div class="text-lg flex flex-col gap-3">
 			<div class="mb-7 mt-4">
 				<img src="/icons/logo.png" alt="Filosofi Logo" class="w-60 h-auto" />
 			</div>
 			<div class="flex flex-col gap-3">
-				{#each logoPhilosophy as lp, idx}
+				{#each logoPhilosophy as lp, idx (lp.title)}
 					<div class="flex flex-col gap-3">
 						<h3 class="text-xl font-bold">{idx + 1}. {lp.title}</h3>
 						<div class="">
-							{#each lp.description as desc}
+							{#each lp.description as desc (desc)}
 								<p class="my-2">{desc}</p>
 							{/each}
 						</div>

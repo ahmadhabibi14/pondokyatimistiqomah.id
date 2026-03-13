@@ -64,7 +64,7 @@
 			</p>
 		</div>
 		<div class="flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-6">
-			{#each Services as srv}
+			{#each Services as srv (srv.name)}
 				<div
 					class="flex flex-row gap-5 border border-gray-300 rounded-xl p-5
 					shadow-md"
