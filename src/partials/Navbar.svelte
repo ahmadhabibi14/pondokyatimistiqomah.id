@@ -40,72 +40,68 @@
 		</div>
 		<nav class="hidden md:flex flex-row gap-6 items-center justify-center w-fit text-sm">
 			<a href="/" class="hover:text-istq-orange">Beranda</a>
-			<a href="/profil">
-				<HoverCard.Root openDelay={100} closeDelay={100}>
-					<HoverCard.Trigger class="flex flex-row items-center gap-1 hover:text-istq-orange">
-						<span>Profil</span>
-						<Icon src={RiArrowsArrowDownSLine} size="20" className="" />
-					</HoverCard.Trigger>
-					<HoverCard.Content class="z-100 px-2 py-3">
-						<div class="flex flex-col text-sm">
+			<HoverCard.Root openDelay={100} closeDelay={100}>
+				<HoverCard.Trigger href="/profil" class="flex flex-row items-center gap-1 hover:text-istq-orange">
+					<span>Profil</span>
+					<Icon src={RiArrowsArrowDownSLine} size="20" className="" />
+				</HoverCard.Trigger>
+				<HoverCard.Content class="z-100 px-2 py-3">
+					<div class="flex flex-col text-sm">
+						<a
+							href="/profil#tentang"
+							class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
+						>
+							Tentang
+						</a>
+						<a
+							href="/profil#visi"
+							class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
+						>
+							Visi
+						</a>
+						<a
+							href="/profil#misi"
+							class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
+						>
+							Misi
+						</a>
+						<a
+							href="/profil#struktur"
+							class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
+						>
+							Struktur
+						</a>
+						<a
+							href="/profil#logo"
+							class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
+						>
+							Makna Logo
+						</a>
+					</div>
+				</HoverCard.Content>
+			</HoverCard.Root>
+			<HoverCard.Root openDelay={100} closeDelay={100}>
+				<HoverCard.Trigger href="/program" class="flex flex-row items-center gap-1 hover:text-istq-orange">
+					<span>Program</span>
+					<Icon src={RiArrowsArrowDownSLine} size="20" className="" />
+				</HoverCard.Trigger>
+				<HoverCard.Content class="z-100 px-2 py-3 w-75">
+					<div class="flex flex-col text-sm">
+						{#each ProgramsShort as pg (pg.link)}
 							<a
-								href="/profil#tentang"
+								href={pg.link}
+								data-sveltekit-reload
 								class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
 							>
-								Tentang
+								{pg.title}
 							</a>
-							<a
-								href="/profil#visi"
-								class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
-							>
-								Visi
-							</a>
-							<a
-								href="/profil#misi"
-								class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
-							>
-								Misi
-							</a>
-							<a
-								href="/profil#struktur"
-								class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
-							>
-								Struktur
-							</a>
-							<a
-								href="/profil#logo"
-								class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
-							>
-								Makna Logo
-							</a>
-						</div>
-					</HoverCard.Content>
-				</HoverCard.Root>
-			</a>
-			<a href="/program">
-				<HoverCard.Root openDelay={100} closeDelay={100}>
-					<HoverCard.Trigger class="flex flex-row items-center gap-1 hover:text-istq-orange">
-						<span>Program</span>
-						<Icon src={RiArrowsArrowDownSLine} size="20" className="" />
-					</HoverCard.Trigger>
-					<HoverCard.Content class="z-100 px-2 py-3 w-[300px]">
-						<div class="flex flex-col text-sm">
-							{#each ProgramsShort as pg (pg.link)}
-								<a
-									href={pg.link}
-									data-sveltekit-reload
-									class="block px-4 py-2 hover:bg-istq-orange/10 hover:text-istq-orange-darker rounded-md"
-								>
-									{pg.title}
-								</a>
-							{/each}
-						</div>
-					</HoverCard.Content>
-				</HoverCard.Root>
-			</a>
+						{/each}
+					</div>
+				</HoverCard.Content>
+			</HoverCard.Root>
 			<a href="/layanan" class="hover:text-istq-orange">Layanan</a>
 			<a href="/posts" class="hover:text-istq-orange">Artikel</a>
-			<a href="/ramadhan" class="hover:text-istq-orange">Ramadhan 1447</a>
+			<a href="/qurban" class="hover:text-istq-orange">Qurban 1447</a>
 		</nav>
 		<a
 			href="https://wa.me/6281213339923"
@@ -165,7 +161,7 @@
 		<span class="h-px w-full border-t border-dashed border-gray-300"></span>
 		<a href="/posts" class="hover:text-qc px-5" onclick={closeNavbar}>Artikel</a>
 		<span class="h-px w-full border-t border-dashed border-gray-300"></span>
-		<a href="/ramadhan" class="hover:text-qc px-5" onclick={closeNavbar}>Ramadhan 1447</a>
+		<a href="/qurban" class="hover:text-qc px-5" onclick={closeNavbar}>Qurban 1447</a>
 		<span class="h-px w-full border-t border-dashed border-gray-300"></span>
 		<div class="w-full flex px-4">
 			<a

@@ -9,7 +9,7 @@
 	<div class="flex flex-col gap-6">
 		<h2 class="md:text-4xl text-3xl font-bold text-center">Program Istiqomah</h2>
 		<div class="flex flex-col md:grid md:grid-cols-3 gap-4 w-full">
-			{#each ProgramsShort as pg, idx (pg.slug)}
+			{#each ProgramsShort as pg, idx (idx)}
 				<a
 					href={pg.link}
 					class="group flex flex-col gap-4 py-4 px-6
