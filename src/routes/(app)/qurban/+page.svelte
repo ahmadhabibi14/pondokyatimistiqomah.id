@@ -3,6 +3,7 @@
 	import * as Table from '$lib/components/ui/table';
 	import FormDonasi from './FormDonasi.svelte';
 	import type { QurbanTable } from '@/types/event';
+	import { SiteBaseUrl } from '@/lib/constant';
 
 	const qurbanKambing: QurbanTable[] = [
 		{
@@ -85,6 +86,9 @@
 	title="Qurban 1447 H"
 	path="/qurban"
 	description="Program Qurban 1447 Hijriyah, Qurban asyik bersama Yatim Dhu'afa penghafal Al-Qur'an"
+	imageUrl="{SiteBaseUrl}/img/qurban-thumb.png"
+	imgWidth=1600
+	imgHeight=712
 />
 
 <div class="w-full h-auto">
