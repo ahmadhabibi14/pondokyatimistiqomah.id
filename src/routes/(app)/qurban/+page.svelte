@@ -1,12 +1,8 @@
 <script lang="ts">
 	import Head from '@/partials/Head.svelte';
 	import * as Table from '$lib/components/ui/table';
-
-	type QurbanTable = {
-		tipe: string;
-		harga: string;
-		berat: string;
-	};
+	import FormDonasi from './FormDonasi.svelte';
+	import type { QurbanTable } from '@/types/event';
 
 	const qurbanKambing: QurbanTable[] = [
 		{
@@ -160,5 +156,7 @@
         <li>a.n. Yayasan Pondok Yatim Istiqomah</li>
       </ul>
     </div>
+		<!-- FORM DONASI -->
+		<FormDonasi />
 	</div>
 </div>
