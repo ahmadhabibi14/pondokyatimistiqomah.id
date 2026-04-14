@@ -82,20 +82,35 @@
 </script>
 
 <Head
-  title="Qurban 1447 H"
-  path="/qurban"
-  description="Program Qurban 1447 Hijriyah, Qurban asyik bersama Yatim Dhu'afa penghafal Al-Qur'an"
+	title="Qurban 1447 H"
+	path="/qurban"
+	description="Program Qurban 1447 Hijriyah, Qurban asyik bersama Yatim Dhu'afa penghafal Al-Qur'an"
 />
 
 <div class="w-full h-auto">
-  <div class="w-full h-auto">
-    <img
-      src="/img/qurban-istiqomah.png"
-      alt=""
-      class="w-full h-auto"
-    />
-  </div>
+	<div class="w-full h-auto">
+		<img src="/img/slides/slide-qurban.png" alt="" class="w-full h-auto" />
+	</div>
 	<div class="container max-w-6xl mx-auto px-4 md:px-0 my-10 flex flex-col gap-8">
+		<div class="md:w-8/12 w-full mx-auto flex flex-row gap-4">
+			<div class="flex flex-col gap-3 grow">
+				<h3 class="font-bold text-xl">Bersama Pondok Yatim Istiqomah, insyaAllah qurban Anda:</h3>
+				<ul>
+					<li>✔ Hewan sehat & sesuai syariat</li>
+					<li>✔ Proses transparan & amanah</li>
+					<li>✔ Daging tersalurkan untuk anak yatim</li>
+				</ul>
+			</div>
+			<div class="w-fit h-auto">
+				<img
+					src="/img/garansi-qurban.png"
+					alt="Garansi"
+					class="w-40 h-auto"
+				/>
+			</div>
+		</div>
+		<!-- FORM DONASI -->
+		<FormDonasi />
 		<!-- KAMBING / DOMBA -->
 		<div class="flex flex-col gap-4 md:w-8/12 w-full mx-auto">
 			<h2 class="font-bold text-3xl text-center">Kambing / Domba</h2>
@@ -140,23 +155,13 @@
 				</Table.Body>
 			</Table.Root>
 		</div>
-    <div class="flex flex-col gap-3 md:w-8/12 w-full mx-auto">
-      <h3 class="font-bold text-xl">Bersama Pondok Yatim Istiqomah, insyaAllah qurban Anda:</h3>
-      <ul>
-        <li>✔ Hewan sehat & sesuai syariat</li>
-        <li>✔ Proses transparan & amanah</li>
-        <li>✔ Daging tersalurkan untuk anak yatim</li>
-      </ul>
-    </div>
-    <div class="flex flex-col gap-3 md:w-8/12 w-full mx-auto">
-      <h3 class="font-bold text-xl">Transfer Donasi Qurban</h3>
-      <ul>
-        <li><b>BCA</b>: 7510375178</li>
-        <li><b>BSI</b>: 7026717803</li>
-        <li>a.n. Yayasan Pondok Yatim Istiqomah</li>
-      </ul>
-    </div>
-		<!-- FORM DONASI -->
-		<FormDonasi />
+		<div class="flex flex-col gap-3 md:w-8/12 w-full mx-auto">
+			<h3 class="font-bold text-xl">Transfer Donasi Qurban</h3>
+			<ul>
+				<li><b>BCA</b>: 7510375178</li>
+				<li><b>BSI</b>: 7026717803</li>
+				<li>a.n. Yayasan Pondok Yatim Istiqomah</li>
+			</ul>
+		</div>
 	</div>
 </div>
