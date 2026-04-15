@@ -7,6 +7,12 @@
 
 	const qurbanKambing: QurbanTable[] = [
 		{
+			tipe: 'Mini',
+			harga: 'Rp. 2.700.000',
+			hargaNumber: 2_700_000,
+			berat: '10 kg'
+		},
+		{
 			tipe: 'A',
 			harga: 'Rp. 3.000.000',
 			berat: '30 kg'
@@ -78,6 +84,24 @@
 			tipe: 'F',
 			harga: 'Rp. 30.500.000',
 			berat: '450 kg'
+		},
+		{
+			tipe: 'G',
+			harga: 'Rp. 35.000.000',
+			hargaNumber: 35_000_000,
+			berat: '500 kg'
+		},
+		{
+			tipe: 'Super',
+			harga: 'Rp. 42.000.000',
+			hargaNumber: 42_000_000,
+			berat: '600 kg'
+		},
+		{
+			tipe: 'Patungan',
+			harga: 'Rp. 3.000.000',
+			hargaNumber: 3_000_000,
+			berat: 'per Jiwa'
 		}
 	];
 </script>

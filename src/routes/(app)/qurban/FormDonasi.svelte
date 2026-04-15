@@ -9,6 +9,12 @@
 	import OnOff from '@/lib/components/OnOff.svelte';
 
 	const hargaQurbanKambing: Record<string, QurbanTable> = {
+		Mini: {
+			tipe: 'Mini',
+			harga: 'Rp. 2.700.000',
+			hargaNumber: 2_700_000,
+			berat: '10 kg'
+		},
 		A: {
 			tipe: 'A',
 			harga: 'Rp. 3.000.000',
@@ -95,10 +101,29 @@
 			harga: 'Rp. 30.500.000',
 			hargaNumber: 30_500_000,
 			berat: '450 kg'
+		},
+		G: {
+			tipe: 'G',
+			harga: 'Rp. 35.000.000',
+			hargaNumber: 35_000_000,
+			berat: '500 kg'
+		},
+		'Super': {
+			tipe: 'Super',
+			harga: 'Rp. 42.000.000',
+			hargaNumber: 42_000_000,
+			berat: '600 kg'
+		},
+		'Patungan': {
+			tipe: 'Patungan',
+			harga: 'Rp. 3.000.000',
+			hargaNumber: 3_000_000,
+			berat: '1 Jiwa'
 		}
 	};
 
 	const selectQurbanKambing = [
+		{ value: 'Mini', label: 'Tipe Mini (27kg) - Rp.2,7jt' },
 		{ value: 'A', label: 'Tipe A (30kg) - Rp.3jt' },
 		{ value: 'B', label: 'Tipe B (35kg) - Rp.3,5jt' },
 		{ value: 'C', label: 'Tipe C (37kg) - Rp.3,7jt' },
@@ -106,7 +131,7 @@
 		{ value: 'E', label: 'Tipe E (45kg) - Rp.4,5jt' },
 		{ value: 'F', label: 'Tipe F (50kg) - Rp.5jt' },
 		{ value: 'G', label: 'Tipe G (60kg) - Rp.6jt' },
-		{ value: 'Super', label: 'Tipe Super (70kg) - Rp.7jt' }
+		{ value: 'Super', label: 'Tipe Super (70kg) - Rp.7jt' },
 	];
 
 	let qurbanKambing: string = $state('');
@@ -120,12 +145,15 @@
 		{ value: 'C', label: 'Tipe C (350kg) - Rp.24,5jt' },
 		{ value: 'D', label: 'Tipe D (370kg) - Rp.25,9jt' },
 		{ value: 'E', label: 'Tipe E (400kg) - Rp.28jt' },
-		{ value: 'F', label: 'Tipe F (450kg) - Rp.30,5jt' }
+		{ value: 'F', label: 'Tipe F (450kg) - Rp.30,5jt' },
+		{ value: 'G', label: 'Tipe G (500kg) - Rp.35jt' },
+		{ value: 'Super', label: 'Tipe Super (600kg) - Rp.42jt' },
+		{ value: 'Patungan', label: 'Patungan - Rp.3jt/Jiwa' },
 	];
 
 	let qurbanSapi: string = $state('');
 	const triggerQurbanSapi = $derived(
-		selectQurbanKambing.find((f) => f.value === qurbanSapi)?.label ?? 'Pilih Qurban Sapi'
+		selectQurbanSapi.find((f) => f.value === qurbanSapi)?.label ?? 'Pilih Qurban Sapi'
 	);
 
 	let namaLengkap: string = $state('');
@@ -167,9 +195,9 @@ No. Telepon: ${telepon}
 Rekening Tujuan:  ${rekening + ' ' + dataRekening[rekening]}
 
 --------------
-${ qurbanKambing ? `Qurban Kambing: ${triggerQurbanKambing}` : ''}${ qurbanSapi ? `
-Qurban Sapi: ${triggerQurbanSapi}` : ''} ${ donasiLainnya ? `
-Donasi Lainnya: Rp. ${donasiLainnya.toLocaleString('id-ID')}` : ''}
+${ qurbanKambing ? `Qurban Kambing: ${triggerQurbanKambing}
+` : ''}${ qurbanSapi ? `Qurban Sapi: ${triggerQurbanSapi}
+` : ''}${ donasiLainnya ? `Donasi Lainnya: Rp. ${donasiLainnya.toLocaleString('id-ID')}` : ''}
 --------------
 
 Total Donasi: Rp. ${totalDonasi.toLocaleString('id-ID')}`;
