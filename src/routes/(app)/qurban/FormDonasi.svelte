@@ -129,6 +129,7 @@
 	);
 
 	let namaLengkap: string = $state('');
+	let qurbanAtasNama: string = $state('');
 	let alamat: string = $state('');
 	let telepon = $state();
 	let donasiLainnya: number = $state(0);
@@ -146,7 +147,7 @@
 
 	let rekening: string = $state('');
 	const selectRekening = [
-		{ value: 'BCA', label: 'BCA: 7510375178' },
+		{ value: 'BCA', label: 'BCA: 7510375178 (M. Sholahudin Suprapto)'  },
 		{ value: 'BSI', label: 'BSI: 7026717803' }
 	];
 	const triggerRekening = $derived(
@@ -154,12 +155,13 @@
 	);
 
 	const handleSubmit = () => {
-		if (!namaLengkap || !alamat || !telepon || (!qurbanKambing && !qurbanSapi) || !rekening) {
+		if (!namaLengkap || !qurbanAtasNama || !alamat || !telepon || (!qurbanKambing && !qurbanSapi) || !rekening) {
 			toast.error('Mohon lengkapi semua form sebelum mengirim donasi.');
 			return;
 		}
 
-		let textToWhatsApp = `Atas Nama: ${namaLengkap}
+		let textToWhatsApp = `Nama: ${namaLengkap}
+Qurban Atas Nama: ${qurbanAtasNama}
 Alamat: ${alamat}
 No. Telepon: ${telepon}
 Rekening Tujuan:  ${rekening + ' ' + dataRekening[rekening]}
@@ -187,13 +189,23 @@ Total Donasi: Rp. ${totalDonasi.toLocaleString('id-ID')}`;
 	<h3 class="font-bold text-2xl text-center">FORM DONASI</h3>
 	<div class="flex flex-col gap-5">
 		<div class="flex w-full flex-col gap-1.5">
-			<Label for="nama-lengkap" class="text-xs ml-1">Atas Nama</Label>
+			<Label for="nama-lengkap" class="text-xs ml-1">Nama</Label>
 			<Input
 				class=""
 				type="text"
 				id="nama-lengkap"
 				placeholder="Muhammad bin Abdullah"
 				bind:value={namaLengkap}
+			/>
+		</div>
+		<div class="flex w-full flex-col gap-1.5">
+			<Label for="atasnama" class="text-xs ml-1">Qurban Atas Nama</Label>
+			<Input
+				class=""
+				type="text"
+				id="atasnama"
+				placeholder=""
+				bind:value={qurbanAtasNama}
 			/>
 		</div>
 		<div class="flex w-full flex-col gap-1.5">
