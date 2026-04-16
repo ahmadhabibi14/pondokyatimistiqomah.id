@@ -8,43 +8,43 @@
 
 	const qurbanKambing: QurbanTable[] = [
 		{
-			tipe: 'Mini',
+			tipe: 'A',
 			harga: 'Rp. 2.700.000',
 			hargaNumber: 2_700_000,
 			berat: '27 kg'
 		},
 		{
-			tipe: 'A',
+			tipe: 'B',
 			harga: 'Rp. 3.000.000',
 			berat: '30 kg'
 		},
 		{
-			tipe: 'B',
+			tipe: 'C',
 			harga: 'Rp. 3.500.000',
 			berat: '35 kg'
 		},
 		{
-			tipe: 'C',
+			tipe: 'D',
 			harga: 'Rp. 3.700.000',
 			berat: '37 kg'
 		},
 		{
-			tipe: 'D',
+			tipe: 'E',
 			harga: 'Rp. 4.000.000',
 			berat: '40 kg'
 		},
 		{
-			tipe: 'E',
+			tipe: 'F',
 			harga: 'Rp. 4.500.000',
 			berat: '45 kg'
 		},
 		{
-			tipe: 'F',
+			tipe: 'G',
 			harga: 'Rp. 5.000.000',
 			berat: '50 kg'
 		},
 		{
-			tipe: 'G',
+			tipe: 'H',
 			harga: 'Rp. 6.000.000',
 			berat: '60 kg'
 		},
@@ -195,13 +195,36 @@
 				</Table.Body>
 			</Table.Root>
 		</div>
-		<div class="flex flex-col gap-3 md:w-8/12 w-full mx-auto">
-			<h3 class="font-bold text-xl">Transfer Donasi Qurban</h3>
-			<ul>
-				<li><b>BCA</b>: 7510375178</li>
-				<li><b>BSI</b>: 7026717803</li>
-				<li>a.n. Yayasan Pondok Yatim Istiqomah</li>
-			</ul>
+		<div class="flex flex-col gap-4 w-full mx-auto">
+			<h3 class="font-bold text-xl text-center">Transfer Donasi Qurban</h3>
+			<div class="flex md:flex-row flex-col justify-center gap-4">
+				<div class="w-full md:w-fit flex flex-row gap-5 items-center justify-center
+					py-5 px-4 bg-neutral-50 border border-neutral-200 rounded-lg">
+					<img
+						src="/img/logo-bsi-sm.png"
+						alt="Logo BSI"
+						class="w-20 md:w-36 h-auto -mt-2.5"
+						fetchpriority="high"
+					/>
+					<div class="grow flex flex-col gap-0 justify-center">
+						<p class="line-clamp-1 text-nowrap whitespace-nowrap text-base font-bold">7026717803</p>
+						<p class="line-clamp-1 text-nowrap whitespace-nowrap text-xs leading-3">(Yayasan Istiqomah)</p>
+					</div>
+				</div>
+				<div class="w-full md:w-fit flex flex-row gap-5 items-center justify-center
+					py-5 px-4 bg-neutral-50 border border-neutral-200 rounded-lg">
+					<img
+						src="/img/logo-bca-sm.png"
+						alt="Logo BCA"
+						class="w-20 md:w-36 h-auto"
+						fetchpriority="high"
+					/>
+					<div class="grow flex flex-col gap-0 justify-center">
+						<p class="line-clamp-1 text-nowrap whitespace-nowrap text-base font-bold">7510375178</p>
+						<p class="line-clamp-1 text-nowrap whitespace-nowrap text-xs leading-3">(M. Sholahudin Suprapto)</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

@@ -33,7 +33,7 @@
 
 <style>
 	.switcher input:checked + .slider {
-		background-color: #3b82f6 !important;
+		background-color: #26288b !important;
 	}
 
 	.switcher input:focus + .slider {
