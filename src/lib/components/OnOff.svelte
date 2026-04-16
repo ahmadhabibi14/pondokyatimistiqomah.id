@@ -12,7 +12,7 @@
 
 <div class="relative flex flex-row-reverse items-center w-fit gap-0.5 bool">
 	<label
-    class="ml-2.5 text-xs text-gray-500 line-clamp-1"
+    class="ml-2.5 text-xs text-gray-500 line-clamp-1 text-nowrap whitespace-nowrap"
     for={id}
   >{label}</label>
 	<label class="relative inline w-12.5 h-6 ml-0! switcher" for={id}>

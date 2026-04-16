@@ -4,13 +4,14 @@
 	import FormDonasi from './FormDonasi.svelte';
 	import type { QurbanTable } from '@/types/event';
 	import { SiteBaseUrl } from '@/lib/constant';
+	import { Info } from '@lucide/svelte';
 
 	const qurbanKambing: QurbanTable[] = [
 		{
 			tipe: 'Mini',
 			harga: 'Rp. 2.700.000',
 			hargaNumber: 2_700_000,
-			berat: '10 kg'
+			berat: '27 kg'
 		},
 		{
 			tipe: 'A',
@@ -117,7 +118,12 @@
 
 <div class="w-full h-auto">
 	<div class="w-full h-auto">
-		<img src="/img/slides/slide-qurban.png" alt="" class="w-full h-auto" />
+		<img
+			src="/img/qurban-thumb.png"
+			alt="Qurban 1447 H"
+			class="w-full h-auto"
+			fetchpriority="high"
+		/>
 	</div>
 	<div class="container max-w-6xl mx-auto px-4 md:px-0 my-10 flex flex-col gap-8">
 		<div class="md:w-8/12 w-full mx-auto flex flex-row gap-4">
@@ -133,9 +139,15 @@
 				<img
 					src="/img/garansi-qurban.png"
 					alt="Garansi"
-					class="w-40 h-auto"
+					class="w-50 md:w-40 h-auto"
+					fetchpriority="high"
 				/>
 			</div>
+		</div>
+		<div class="md:w-8/12 w-full mx-auto rounded-md
+			flex flex-row items-center gap-2 p-5 bg-sky-400/20 border border-sky-500 text-sky-600">
+			<Info size="25" class="shrink-0" />
+			<p class="grow wrap">Hewan Qurban bisa dilihat dan dipilih langsung di Pondok Yatim Istiqomah</p>
 		</div>
 		<!-- FORM DONASI -->
 		<FormDonasi />

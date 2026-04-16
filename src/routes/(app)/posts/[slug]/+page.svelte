@@ -76,7 +76,7 @@
 	/>
 {/if}
 
-<div class="min-h-[900px] w-full flex flex-col">
+<div class="min-h-225 w-full flex flex-col">
 	{#if exist && post}
 		<div class="container max-w-6xl mx-auto flex flex-col gap-8 my-10">
 			<div
@@ -100,7 +100,7 @@
 						<span>Beranda</span>
 					</a>
 					<Icon src={RiArrowsArrowRightSLine} size="15" className="text-istq fill-istq shrink-0" />
-					<a href="/posts" class="hover:underline"> Berita </a>
+					<a href="/posts" class="hover:underline"> Artikel </a>
 					<Icon src={RiArrowsArrowRightSLine} size="15" className="text-istq fill-istq shrink-0" />
 					<span class="line-clamp-1">
 						{@html post.title?.rendered}
@@ -125,7 +125,7 @@
 
 				<!-- Thumbnail -->
 				<div class="flex flex-col gap-2 items-center not-prose">
-					<div class="w-full h-[250px] md:h-[400px] rounded-xl overflow-hidden">
+					<div class="w-full h-62.5 md:h-100 rounded-xl overflow-hidden">
 						<img
 							src={imageUrl}
 							alt={thumb?.alt_text ?? post.title?.rendered}

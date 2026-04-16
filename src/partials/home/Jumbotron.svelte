@@ -2,7 +2,27 @@
 	import { browser } from '$app/environment';
 	import Carousel from 'svelte-carousel';
 
-	const slideImages: string[] = ['/img/slides/1.jpg', '/img/slides/2.jpg', '/img/slides/3.jpg'];
+	const slideImages: {
+		src: string;
+		path: string;
+	}[] = [
+		{
+			src: '/img/slides/1.jpg',
+			path: '/'
+		},
+		{
+			src: '/img/slides/2.jpg',
+			path: '/'
+		},
+		{
+			src: '/img/slides/3.png',
+			path: '/qurban'
+		},
+		{
+			src: '/img/slides/4.jpg',
+			path: '/ramadhan'
+		},
+	];
 
 	function handleImgSrcError(event: Event): void {
 		const target = event.currentTarget as HTMLImageElement;
@@ -35,16 +55,18 @@
 							<h2 class="text-2xl">Loading image ...</h2>
 						</div>
 					{/if}
-					<img
-						onerror={handleImgSrcError}
-						src={img}
-						alt="Slide {idx + 1}"
-						class="w-full object-cover"
-						class:opacity-0={!imageLoaded[idx]}
-						class:opacity-100={imageLoaded[idx]}
-						fetchpriority="high"
-						onload={() => (imageLoaded[idx] = true)}
-					/>
+					<a href={img.path}>
+						<img
+							onerror={handleImgSrcError}
+							src={img.src}
+							alt="Slide {idx + 1}"
+							class="w-full object-cover"
+							class:opacity-0={!imageLoaded[idx]}
+							class:opacity-100={imageLoaded[idx]}
+							fetchpriority="high"
+							onload={() => (imageLoaded[idx] = true)}
+						/>
+					</a>
 				</div>
 			{/each}
 		</Carousel>

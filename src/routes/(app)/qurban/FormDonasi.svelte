@@ -156,11 +156,22 @@
 		selectQurbanSapi.find((f) => f.value === qurbanSapi)?.label ?? 'Pilih Qurban Sapi'
 	);
 
+
 	let namaLengkap: string = $state('');
-	let qurbanAtasNama: string = $state('');
+	let qurbanAtasNama: string = $state(''); 
 	let alamat: string = $state('');
 	let telepon = $state();
 	let donasiLainnya: number = $state(0);
+
+	let toggleSamakanNamaLengkap: boolean = $state(false);
+	
+	$effect(() => {
+		if (toggleSamakanNamaLengkap) {
+			qurbanAtasNama = namaLengkap;
+		} else {
+			qurbanAtasNama = '';
+		}
+	})
 
 	let totalDonasi: number = $derived(
 		(qurbanKambing ? hargaQurbanKambing[qurbanKambing]?.hargaNumber || 0 : 0) +
@@ -226,14 +237,21 @@ Total Donasi: Rp. ${totalDonasi.toLocaleString('id-ID')}`;
 				bind:value={namaLengkap}
 			/>
 		</div>
-		<div class="flex w-full flex-col gap-1.5">
-			<Label for="atasnama" class="text-xs ml-1">Qurban Atas Nama</Label>
-			<Input
-				class=""
-				type="text"
-				id="atasnama"
-				placeholder=""
-				bind:value={qurbanAtasNama}
+		<div class="flex flex-col md:flex-row gap-2 md:items-end items-start">
+			<div class="flex w-full flex-col gap-1.5">
+				<Label for="atasnama" class="text-xs ml-1">Qurban Atas Nama</Label>
+				<Input
+					class=""
+					type="text"
+					id="atasnama"
+					placeholder="alm. Ikhsan"
+					bind:value={qurbanAtasNama}
+				/>
+			</div>
+			<OnOff
+				id="toggle-atas-nama"
+				label="Samakan dgn Nama Lengkap"
+				bind:checked={toggleSamakanNamaLengkap}
 			/>
 		</div>
 		<div class="flex w-full flex-col gap-1.5">
